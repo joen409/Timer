@@ -28,22 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.btnCount = new System.Windows.Forms.Button();
+            this.txtCountDown = new System.Windows.Forms.TextBox();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(535, 21);
-            this.textBox1.TabIndex = 0;
+            this.txtNum.Location = new System.Drawing.Point(13, 13);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(535, 21);
+            this.txtNum.TabIndex = 0;
+            this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(13, 41);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(535, 120);
+            this.btnCount.TabIndex = 1;
+            this.btnCount.Text = "카운트다운";
+            this.btnCount.UseVisualStyleBackColor = true;
+            // 
+            // txtCountDown
+            // 
+            this.txtCountDown.Font = new System.Drawing.Font("굴림", 20F);
+            this.txtCountDown.Location = new System.Drawing.Point(12, 196);
+            this.txtCountDown.Name = "txtCountDown";
+            this.txtCountDown.ReadOnly = true;
+            this.txtCountDown.Size = new System.Drawing.Size(536, 38);
+            this.txtCountDown.TabIndex = 2;
+            this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 329);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCountDown);
+            this.Controls.Add(this.btnCount);
+            this.Controls.Add(this.txtNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -56,7 +86,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.TextBox txtCountDown;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 
